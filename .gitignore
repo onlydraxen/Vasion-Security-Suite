@@ -1,0 +1,45 @@
+# Python compilados
+__pycache__/
+*.pyc
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Archivos de build (C++/Rust)
+*.exe
+*.dll
+*.so
+*.o
+target/ # Carpeta de compilación de Rust
+
+# Bases de datos y archivos de datos
+*.db
+vasion_intelligence.db
+metadata.db
+learning_feedback.db # Si existen
+
+# Archivos sensibles y de configuración local
+config.json
+credenciales.secure
+encryption.key
+encryption_key.secure
+
+# Modelos de Machine Learning
+*.joblib
+*.pkl
+*.h5
+*.keras
+
+# Archivos generados por PyInstaller
+*.spec
+
+# Otros archivos generados y misceláneos (revisando tu lista anterior)
+*.exe
+*.dll
+*.so
+*.o
+target/
+ss1
+*.log

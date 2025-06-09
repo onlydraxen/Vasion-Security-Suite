@@ -1,0 +1,12 @@
+{
+    "whitelist": [],
+    "blacklist": [
+        "regedit.exe",
+        "mimikatz.exe",
+        "nc.exe",
+        "ftp.exe",
+        "netstat.exe",
+        "taskmgr.exe",
+        "wmic.exe"
+    ]
+}

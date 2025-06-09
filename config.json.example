@@ -1,0 +1,8 @@
+ {
+    "VIRUSTOTAL_API_KEY": "TU_API_KEY_AQUI",
+    "admin_password": "TU_CONTRASEÑA_ADMIN_AQUI",
+    "ADMIN_PASSWORD": "TU_CONTRASEÑA_ADMIN_AQUI",
+    "correo_programador": "tu_correo@ejemplo.com",
+    "contrasena_programador": "TU_CONTRASEÑA_CORREO_AQUI",
+    "password_cierre": "TU_CONTRASEÑA_CIERRE_AQUI"
+     }
