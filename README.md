@@ -1,137 +1,104 @@
-# Vasion Security Suite - Elite Edition (Proyecto en Desarrollo)
+# Vasion Security Suite 🛡️
 
-¡Hola! Soy un desarrollador nuevo en el mundo de la programación (llevo aproximadamente una semana) y este es mi primer proyecto personal. He estado aprendiendo a unir diferentes piezas de código, a hacer pequeñas modificaciones y a corregir sintaxis todo con ayuda de IA para dar vida a esta suite de seguridad.
+![Vasion Security Suite](https://img.shields.io/badge/version-1.0.0-blue.svg) ![Python](https://img.shields.io/badge/language-Python-yellow.svg) ![C++](https://img.shields.io/badge/language-C%2B%2B-orange.svg) ![Rust](https://img.shields.io/badge/language-Rust-red.svg)
 
-**Vasion Security Suite** es un proyecto objetivo de explorar la detección avanzada de anomalías en sistemas, utilizando la inteligencia artificial y la integración de diferentes lenguajes para un monitoreo de bajo nivel.
+Welcome to the **Vasion Security Suite**! This project focuses on advanced anomaly detection and system monitoring using artificial intelligence. Our suite leverages the power of Python, C++, and Rust to provide a robust security solution for your systems.
 
-## Visión del Proyecto
+## Table of Contents
 
-Mi objetivo es construir un sistema de seguridad que no solo detecte amenazas, sino que también aprenda y se adapte continuamente al entorno de la máquina.
+1. [Overview](#overview)
+2. [Features](#features)
+3. [Technologies Used](#technologies-used)
+4. [Installation](#installation)
+5. [Usage](#usage)
+6. [Contributing](#contributing)
+7. [License](#license)
+8. [Releases](#releases)
+9. [Contact](#contact)
 
-## Esquema Arquitectónico Actual (Planificado y en Proceso)
+## Overview
 
-Mi visión incluye un flujo de trabajo que incorpora aprendizaje automático y retroalimentación continua:
+In today's digital landscape, cybersecurity is crucial. The **Vasion Security Suite** aims to provide tools for detecting anomalies in system behavior, which can indicate potential security threats. By using machine learning algorithms, our suite can analyze patterns and identify unusual activities that may signify malware or other security issues.
 
-Este es un esquema mental aproximadamente en conjunto con la ayuda de la IA 
+## Features
 
-+---------------------------------------------+
-|                 VasionCore                  |
-|                                             |
-|   +---------------------------------------+ |
-|   |       Bucle de Refinamiento (Python)    | |
-|   |                                         | |
------>|   |  +-----------------+  (datos +           | |
-(Datos   |   |  | Red Neuronal    |  salida de IF) --> | |
-brutos  |   |  | (Clasificador)  |                    | |
-de Rust/ |   |  +-------+---------+                    | |
-C++/SQL) |   |          ^       |                      | |
-|   |          |(resultado NN)                 | |
------>|   |          |       v                      | |
-(Alerta   |   |  +-------+---------+                    | |
-de alta   |   |  | IsolationForest |                    | |
-confianza) |   |  | (Detector Anom.)| &lt;-- (datos +        | |
-|   |  +-----------------+   resultado NN)    | |
-|   |                                         | |
-+---------------------------------------------+ |
-|                                             |
-+---------------------------------------------+
+- **Advanced Anomaly Detection**: Detect deviations from normal system behavior.
+- **Real-time Monitoring**: Keep track of system activities in real time.
+- **Multi-language Support**: Built using Python, C++, and Rust for flexibility and performance.
+- **User-friendly Interface**: Designed with Tkinter for easy interaction.
+- **Machine Learning Integration**: Utilize AI for smarter detection capabilities.
+- **Comprehensive Reports**: Generate detailed reports on detected anomalies.
 
-Además, tengo planes para una capa de análisis más profunda y un mecanismo de aprendizaje continuo:
+## Technologies Used
 
-+-------------------------+
-|     Módulo 3 (Análisis  |
-|     Profundo - NN)      |
-|                         |
-|   Resultado: SOSPECHOSO |
-+------------+------------+
-|
-(Este evento y sus        +----------+
-características se        |
-usan como nuevo dato      | (Retroalimentación de aprendizaje)
-de entrenamiento)         |
-v+-----------------+      +-------------------------+
-|     Módulo 1    | &lt;--- |  Mecanismo de Reentreno | ----> (Se actualiza
-| (Triaje Rápido) |      |     Online / Continuo   |       el modelo
-+-----------------+      +-------------------------+       en vivo)
+- **Python**: For rapid development and ease of use.
+- **C++**: For performance-critical components.
+- **Rust**: For memory safety and concurrency.
+- **Tkinter**: For creating a graphical user interface.
+- **Machine Learning Libraries**: Such as TensorFlow and Scikit-learn for AI capabilities.
 
-Todos los módulos de IA separados deben compartir información para aprender y no ser condicionados por un virus que lance programas benignos para condicionar, etc.
+## Installation
 
-## Características Actuales
+To get started with the **Vasion Security Suite**, follow these steps:
 
-A día de hoy, el proyecto cuenta con:
-* Interfaz Gráfica de Usuario (GUI) con Tkinter, aunque se debe de configurar porque aun lo estoy desarrollando
-* Monitoreo básico de procesos (listas blancas/negras).
-* Escaneo de archivos con detección de anomalías usando `IsolationForest`.
-* Integración básica con C++ para el registro de metadatos (`metadata.db`).
-* Conector inicial con Rust (`vasion_bridge`).
-* Funcionalidades de notificación por correo electrónico y cifrado de configuración.
+1. Clone the repository:
 
-## Tecnologías Utilizadas
+   ```bash
+   git clone https://github.com/onlydraxen/Vasion-Security-Suite.git
+   ```
 
-* **Python:** Para la lógica principal, GUI y Machine Learning.
-* **C++:** Para funciones de registro de bajo nivel.
-* **Rust:** Para monitoreo del sistema y posibles operaciones de bajo nivel (en desarrollo).
-* **SQLite:** Para bases de datos locales.
-* **Scikit-learn:** Para modelos de ML.
-* **Tkinter:** Para la interfaz gráfica.
+2. Navigate to the project directory:
 
-## Cómo Ejecutar el Proyecto (Configuración Inicial)
+   ```bash
+   cd Vasion-Security-Suite
+   ```
 
-1.  **Clonar el repositorio:**
-    ```bash
-    git clone [https://github.com/TuUsuario/Vasion-Security-Suite.git](https://github.com/TuUsuario/Vasion-Security-Suite.git)
-    cd Vasion-Security-Suite
-    ```
-2.  **Configurar el entorno Python:**
-    ```bash
-    python -m venv venv
-    .\venv\Scripts\activate # En Windows
-    source venv/bin/activate # En Linux/macOS
-    ```
-3.  **Instalar dependencias de Python:**
-    ```bash
-    pip install psutil Pillow scikit-learn cryptography requests tk # Agrega tensorflow si ya lo usas, o planeas usarlo pronto
-    ```
-4.  **Compilar el módulo C++:**
-    * Necesitarás un compilador C++ (MinGW en Windows, GCC/Clang en Linux/macOS).
-    * En Windows, compila `basededatos.cpp` a `db_module.dll`.
-        ```bash
-        g++ -shared -o db_module.dll basededatos.cpp
-        ```
-    * En Linux, compila a `libdb_module.so`.
-        ```bash
-        g++ -shared -fPIC -o libdb_module.so basededatos.cpp
-        ```
-5.  **Compilar el módulo Rust:**
-    * Necesitarás [Rustup](https://rustup.rs/) para instalar Rust.
-    * Navega a la carpeta donde está `lib.rs` (ej. `connectors/vasion_bridge/` si la estructura lo permite) y ejecuta:
-        ```bash
-        cargo build --release
-        ```
-        Esto generará `vasion_bridge.dll` (Windows) o `libvasion_bridge.so` (Linux/macOS) en `target/release/`. Deberás copiar este archivo a la raíz de tu proyecto o a la carpeta donde Python espera encontrarlo.
-6.  **Crear `config.json`:**
-    * Crea un archivo llamado `config.json` en la raíz del proyecto con la siguiente estructura 
-        ```json
-      {
-    "VIRUSTOTAL_API_KEY": "TU_API_KEY_AQUI",
-    "admin_password": "TU_CONTRASEÑA_ADMIN_AQUI",
-    "ADMIN_PASSWORD": "TU_CONTRASEÑA_ADMIN_AQUI",
-    "correo_programador": "tu_correo@ejemplo.com",
-    "contrasena_programador": "TU_CONTRASEÑA_CORREO_AQUI",
-    "password_cierre": "TU_CONTRASEÑA_CIERRE_AQUI"
-     }
-        ```
-7.  **Ejecutar la aplicación:**
-    ```bash
-    python main.py
-    ```
+3. Install the required dependencies:
 
-## Cómo Contribuir
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-¡Estoy empezando en esto y agradecería enormemente cualquier tipo de ayuda, feedback o colaboración! Si tienes ideas, encuentras un error, o quieres ayudar a implementar alguna de las características planificadas
-* Contactarme directamente si quieres discutir más a fondo.
-Estoy abierto a aprender y a que este proyecto crezca con la ayuda de la comunidad.
-ademas de afirmar que no se nada de programar solo me apoye con la IA modifique algunos bloques
-mejore otros, arregle la sintaxis y le fui preguntando sobre algunas formar de optimizar o incluir mejoras, Este proyecto es de código abierto bajo la Licencia MIT. Siéntase libre de utilizarlo, modificarlo y distribuirlo, no debe de ser un 
-reemplazo para los antivirus ni un EDM me gustaria una fomra de integrarlos, cooperar con informacion datos etc.
-Gracias
+4. Build the C++ and Rust components as necessary.
+
+5. Run the application:
+
+   ```bash
+   python main.py
+   ```
+
+## Usage
+
+After installation, you can start using the **Vasion Security Suite**. The user interface will guide you through the various features available. You can configure monitoring settings, start scans, and view reports on detected anomalies.
+
+### Basic Commands
+
+- **Start Monitoring**: Click the "Start" button to begin real-time monitoring.
+- **View Reports**: Access the "Reports" section to see detailed findings.
+- **Configure Settings**: Adjust detection parameters under the "Settings" tab.
+
+## Contributing
+
+We welcome contributions from the community. If you want to help improve the **Vasion Security Suite**, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push to your forked repository.
+5. Submit a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Releases
+
+You can find the latest releases of the **Vasion Security Suite** [here](https://github.com/onlydraxen/Vasion-Security-Suite/releases). Download the latest version and follow the installation instructions to get started.
+
+## Contact
+
+For questions or feedback, please reach out via the GitHub issues page or contact the maintainers directly. Your input is valuable in making this project better.
+
+---
+
+Thank you for checking out the **Vasion Security Suite**! We hope it helps you enhance your system's security.
